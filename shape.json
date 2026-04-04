@@ -1,0 +1,1261 @@
+{
+  "orderFormId": "864d9c513a184558bd8a7c20e23590d4",
+  "salesChannel": "1",
+  "loggedIn": false,
+  "isCheckedIn": false,
+  "storeId": null,
+  "checkedInPickupPointId": null,
+  "allowManualPrice": false,
+  "canEditData": true,
+  "userProfileId": "a6aa5b2d-f399-4c37-b4a9-d5bf5c970ba3",
+  "userType": null,
+  "ignoreProfileData": false,
+  "value": 109995000,
+  "messageorderGroup": [],
+  "items": [
+    {
+      "uniqueId": "DF1A8DE787084DFAB2B705A5154A76BD",
+      "id": "250340",
+      "productId": "46006",
+      "productRefId": "3MG10054857",
+      "refId": "1213364",
+      "ean": "7615537589077",
+      "name": "On Cloudmonster 3 Tenis negro de hombre para correr Talla :-8-",
+      "skuName": "Talla :-8-",
+      "modalType": null,
+      "parentItemIndex": null,
+      "parentAssemblyBinding": null,
+      "assemblies": [],
+      "priceValidUntil": "2027-04-04T17:17:49Z",
+      "tax": 0,
+      "price": 109995000,
+      "listPrice": 109995000,
+      "manualPrice": null,
+      "manualPriceAppliedBy": null,
+      "sellingPrice": 109995000,
+      "rewardValue": 0,
+      "isGift": false,
+      "additionalInfo": {
+        "dimension": null,
+        "brandName": "ON",
+        "brandId": "2000021",
+        "offeringInfo": null,
+        "offeringType": null,
+        "offeringTypeId": null
+      },
+      "preSaleDate": null,
+      "productCategoryIds": "/1/2/3/",
+      "productCategories": {
+        "1": "Hombre",
+        "2": "Tenis",
+        "3": "Correr"
+      },
+      "quantity": 1,
+      "seller": "1",
+      "sellerChain": ["1"],
+      "imageUrl": "https://prochampions.vteximg.com.br/arquivos/ids/1505561-100-100/3MG10054857-cloudmonster_3-ss26-rock_silver-m-1x1-d.png?v=639105731283670000",
+      "detailUrl": "/on-cloudmonster-3-tenis-negro-de-hombre-para-correr-3mg10054857-1/p",
+      "components": [],
+      "bundleItems": [],
+      "attachments": [],
+      "attachmentOfferings": [],
+      "offerings": [],
+      "priceTags": [],
+      "availability": "available",
+      "measurementUnit": "un",
+      "unitMultiplier": 1,
+      "manufacturerCode": null,
+      "priceDefinition": {
+        "calculatedSellingPrice": 109995000,
+        "total": 109995000,
+        "sellingPrices": [
+          {
+            "value": 109995000,
+            "quantity": 1
+          }
+        ],
+        "reason": null
+      },
+      "taxCode": ""
+    }
+  ],
+  "selectableGifts": [],
+  "totalizers": [
+    {
+      "id": "Items",
+      "name": "Total de los items",
+      "value": 109995000
+    }
+  ],
+  "shippingData": {
+    "address": null,
+    "logisticsInfo": [
+      {
+        "itemIndex": 0,
+        "selectedSla": null,
+        "selectedDeliveryChannel": null,
+        "addressId": null,
+        "slas": [],
+        "shipsTo": ["COL"],
+        "itemId": "250340",
+        "deliveryChannels": [
+          {
+            "id": "delivery"
+          },
+          {
+            "id": "pickup-in-point"
+          }
+        ]
+      }
+    ],
+    "selectedAddresses": [],
+    "availableAddresses": [],
+    "pickupPoints": [],
+    "contactInformation": []
+  },
+  "clientProfileData": {
+    "email": "ahmed@hellotext.com",
+    "firstName": "Ahmed",
+    "lastName": "Khattab",
+    "document": "1020833213",
+    "documentType": "cedulaCOL",
+    "phone": "+573157669797",
+    "corporateName": null,
+    "tradeName": null,
+    "corporateDocument": null,
+    "stateInscription": "",
+    "corporatePhone": null,
+    "isCorporate": false,
+    "profileCompleteOnLoading": false,
+    "profileErrorOnLoading": false,
+    "customerClass": null
+  },
+  "paymentData": {
+    "updateStatus": "updated",
+    "installmentOptions": [
+      {
+        "paymentSystem": "1",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 2,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 54997500,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 2,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 54997500,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 3,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 36665000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 3,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 36665000,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 6,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 18332500,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 6,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 18332500,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 12,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 9166300,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 12,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 9166300,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 24,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 4583200,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 24,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 4583200,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "2",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 2,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 54997500,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 2,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 54997500,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 3,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 36665000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 3,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 36665000,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 6,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 18332500,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 6,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 18332500,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 12,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 9166300,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 12,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 9166300,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 24,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 4583200,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 24,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 4583200,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "3",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 2,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 54997500,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 2,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 54997500,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 3,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 36665000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 3,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 36665000,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 6,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 18332500,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 6,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 18332500,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 12,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 9166300,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 12,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 9166300,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 24,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 4583200,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 24,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 4583200,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "4",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 2,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 54997500,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 2,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 54997500,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 3,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 36665000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 3,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 36665000,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 6,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 18332500,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 6,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 18332500,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 12,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 9166300,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 12,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 9166300,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 24,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 4583200,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 24,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 4583200,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "16",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": false,
+            "interestRate": 0,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": false,
+                "interestRate": 0,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "102",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": false,
+            "interestRate": 0,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": false,
+                "interestRate": 0,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "118",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": false,
+            "interestRate": 0,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": false,
+                "interestRate": 0,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "126",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": false,
+            "interestRate": 0,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": false,
+                "interestRate": 0,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "156",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": false,
+            "interestRate": 0,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": false,
+                "interestRate": 0,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "201",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": false,
+            "interestRate": 0,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": false,
+                "interestRate": 0,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "501",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 2,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 54997500,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 2,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 54997500,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 3,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 36665000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 3,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 36665000,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 6,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 18332500,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 6,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 18332500,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 12,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 9166300,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 12,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 9166300,
+                "total": 109995000
+              }
+            ]
+          },
+          {
+            "count": 24,
+            "hasInterestRate": null,
+            "interestRate": null,
+            "value": 4583200,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 24,
+                "hasInterestRate": null,
+                "interestRate": null,
+                "value": 4583200,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paymentSystem": "701",
+        "bin": null,
+        "paymentName": null,
+        "paymentGroupName": null,
+        "value": 109995000,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": false,
+            "interestRate": 0,
+            "value": 109995000,
+            "total": 109995000,
+            "sellerMerchantInstallments": [
+              {
+                "id": "PROCHAMPIONS",
+                "count": 1,
+                "hasInterestRate": false,
+                "interestRate": 0,
+                "value": 109995000,
+                "total": 109995000
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "paymentSystems": [
+      {
+        "id": 1,
+        "name": "American Express",
+        "groupName": "creditCardPaymentGroup",
+        "validator": {
+          "regex": "^3[47][0-9]{13}$",
+          "mask": "9999 999999 99999",
+          "cardCodeRegex": "^[0-9]{4}$",
+          "cardCodeMask": "9999",
+          "weights": [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1],
+          "useCvv": true,
+          "useExpirationDate": true,
+          "useCardHolderName": true,
+          "useBillingAddress": true
+        },
+        "stringId": "1",
+        "template": "creditCardPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": null,
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-11T17:15:07.0038438Z",
+        "availablePayments": null
+      },
+      {
+        "id": 2,
+        "name": "Visa",
+        "groupName": "creditCardPaymentGroup",
+        "validator": {
+          "regex": "^4[0-9]{15}$",
+          "mask": "9999 9999 9999 9999",
+          "cardCodeRegex": "^[0-9]{3}$",
+          "cardCodeMask": "999",
+          "weights": [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+          "useCvv": true,
+          "useExpirationDate": true,
+          "useCardHolderName": true,
+          "useBillingAddress": true
+        },
+        "stringId": "2",
+        "template": "creditCardPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": null,
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-11T17:15:07.0038441Z",
+        "availablePayments": null
+      },
+      {
+        "id": 3,
+        "name": "Diners",
+        "groupName": "creditCardPaymentGroup",
+        "validator": {
+          "regex": "^3(0[0-5]|[68][0-9])[0-9]{11}$",
+          "mask": "9999 999999 9999",
+          "cardCodeRegex": "^[0-9]{3}$",
+          "cardCodeMask": "999",
+          "weights": [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+          "useCvv": true,
+          "useExpirationDate": true,
+          "useCardHolderName": true,
+          "useBillingAddress": true
+        },
+        "stringId": "3",
+        "template": "creditCardPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": null,
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-11T17:15:07.0038442Z",
+        "availablePayments": null
+      },
+      {
+        "id": 4,
+        "name": "Mastercard",
+        "groupName": "creditCardPaymentGroup",
+        "validator": {
+          "regex": "^((5(([1-2]|[4-5])[0-9]{8}|0((1|6)([0-9]{7}))|3(0(4((0|[2-9])[0-9]{5})|([0-3]|[5-9])[0-9]{6})|[1-9][0-9]{7})))|((508116)\\d{4,10})|((502121)\\d{4,10})|((589916)\\d{4,10})|(2[0-9]{15})|(67[0-9]{14})|(506387)\\d{4,10})",
+          "mask": "9999 9999 9999 9999",
+          "cardCodeRegex": "^[0-9]{3}$",
+          "cardCodeMask": "999",
+          "weights": [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+          "useCvv": true,
+          "useExpirationDate": true,
+          "useCardHolderName": true,
+          "useBillingAddress": true
+        },
+        "stringId": "4",
+        "template": "creditCardPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": null,
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-11T17:15:07.0038444Z",
+        "availablePayments": null
+      },
+      {
+        "id": 102,
+        "name": "Addi",
+        "groupName": "AddiPaymentGroup",
+        "validator": {
+          "regex": null,
+          "mask": null,
+          "cardCodeRegex": null,
+          "cardCodeMask": null,
+          "weights": null,
+          "useCvv": false,
+          "useExpirationDate": false,
+          "useCardHolderName": false,
+          "useBillingAddress": false
+        },
+        "stringId": "102",
+        "template": "AddiPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": null,
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-11T17:15:07.0038446Z",
+        "availablePayments": null
+      },
+      {
+        "id": 126,
+        "name": "MercadoPagoWallet",
+        "groupName": "MercadoPagoWalletPaymentGroup",
+        "validator": {
+          "regex": null,
+          "mask": null,
+          "cardCodeRegex": null,
+          "cardCodeMask": null,
+          "weights": null,
+          "useCvv": false,
+          "useExpirationDate": false,
+          "useCardHolderName": false,
+          "useBillingAddress": false
+        },
+        "stringId": "126",
+        "template": "MercadoPagoWalletPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": null,
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-11T17:15:07.0038447Z",
+        "availablePayments": null
+      },
+      {
+        "id": 156,
+        "name": "MercadoPagoOff",
+        "groupName": "MercadoPagoOffPaymentGroup",
+        "validator": {
+          "regex": null,
+          "mask": null,
+          "cardCodeRegex": null,
+          "cardCodeMask": null,
+          "weights": null,
+          "useCvv": false,
+          "useExpirationDate": false,
+          "useCardHolderName": false,
+          "useBillingAddress": false
+        },
+        "stringId": "156",
+        "template": "MercadoPagoOffPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": null,
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-11T17:15:07.0038448Z",
+        "availablePayments": null
+      },
+      {
+        "id": 701,
+        "name": "PSE",
+        "groupName": "PSEPaymentGroup",
+        "validator": {
+          "regex": null,
+          "mask": null,
+          "cardCodeRegex": null,
+          "cardCodeMask": null,
+          "weights": null,
+          "useCvv": false,
+          "useExpirationDate": false,
+          "useCardHolderName": false,
+          "useBillingAddress": false
+        },
+        "stringId": "701",
+        "template": "PSEPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": null,
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-11T17:15:07.003845Z",
+        "availablePayments": null
+      },
+      {
+        "id": 201,
+        "name": "Pago Contra entrega",
+        "groupName": "custom201PaymentGroupPaymentGroup",
+        "validator": {
+          "regex": null,
+          "mask": null,
+          "cardCodeRegex": null,
+          "cardCodeMask": null,
+          "weights": null,
+          "useCvv": false,
+          "useExpirationDate": false,
+          "useCardHolderName": false,
+          "useBillingAddress": false
+        },
+        "stringId": "201",
+        "template": "custom201PaymentGroupPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": true,
+        "description": "Elegiste el medio de envío contra entrega. Compra ahora y paga cuando recibas tu pedido Ten la cantidad de dinero exacta para el momento que nuestro transportador te entregue el pedido. si deseas otro medio de pago, cambia tu metodo de entrega.",
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-14T17:16:07.0038452Z",
+        "availablePayments": null
+      },
+      {
+        "id": 501,
+        "name": "Codensa",
+        "groupName": "customPrivate_501PaymentGroup",
+        "validator": {
+          "regex": "5(9(0(7(1(2)))))",
+          "mask": "9999 9999 9999 9999",
+          "cardCodeRegex": "^[0-9]{3}$",
+          "cardCodeMask": "999",
+          "weights": [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+          "useCvv": true,
+          "useExpirationDate": true,
+          "useCardHolderName": true,
+          "useBillingAddress": true
+        },
+        "stringId": "501",
+        "template": "customPrivate_501PaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": true,
+        "description": "Codensa",
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-14T17:15:07.0038453Z",
+        "availablePayments": null
+      },
+      {
+        "id": 118,
+        "name": "SisteCredito",
+        "groupName": "SisteCreditoPaymentGroup",
+        "validator": {
+          "regex": null,
+          "mask": null,
+          "cardCodeRegex": null,
+          "cardCodeMask": null,
+          "weights": null,
+          "useCvv": false,
+          "useExpirationDate": false,
+          "useCardHolderName": false,
+          "useBillingAddress": false
+        },
+        "stringId": "118",
+        "template": "SisteCreditoPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": null,
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-11T17:15:07.0038455Z",
+        "availablePayments": null
+      },
+      {
+        "id": 16,
+        "name": "Vale",
+        "groupName": "giftCardPaymentGroup",
+        "validator": {
+          "regex": null,
+          "mask": null,
+          "cardCodeRegex": null,
+          "cardCodeMask": null,
+          "weights": null,
+          "useCvv": false,
+          "useExpirationDate": false,
+          "useCardHolderName": false,
+          "useBillingAddress": false
+        },
+        "stringId": "16",
+        "template": "giftCardPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": null,
+        "requiresAuthentication": false,
+        "dueDate": "2026-04-11T17:15:07.0038456Z",
+        "availablePayments": null
+      }
+    ],
+    "payments": [
+      {
+        "paymentSystem": "2",
+        "bin": null,
+        "accountId": null,
+        "tokenId": null,
+        "installments": null,
+        "referenceValue": 109995000,
+        "value": 109995000,
+        "merchantSellerPayments": [
+          {
+            "id": "PROCHAMPIONS",
+            "installments": null,
+            "referenceValue": 109995000,
+            "value": 109995000,
+            "interestRate": null,
+            "installmentValue": 0
+          }
+        ]
+      }
+    ],
+    "giftCards": [],
+    "giftCardMessages": [],
+    "availableAccounts": [],
+    "availableTokens": [],
+    "availableAssociations": {}
+  },
+  "marketingData": null,
+  "sellers": [
+    {
+      "id": "1",
+      "name": "Dporte SAS",
+      "logo": "",
+      "minimumOrderValue": 0
+    }
+  ],
+  "clientPreferencesData": {
+    "locale": "es-CO",
+    "optinNewsLetter": false
+  },
+  "commercialConditionData": null,
+  "storePreferencesData": {
+    "countryCode": "COL",
+    "saveUserData": true,
+    "timeZone": "SA Pacific Standard Time",
+    "currencyCode": "COP",
+    "currencyLocale": 9226,
+    "currencySymbol": "$",
+    "currencyFormatInfo": {
+      "currencyDecimalDigits": 0,
+      "currencyDecimalSeparator": ",",
+      "currencyGroupSeparator": ".",
+      "currencyGroupSize": 3,
+      "startsWithCurrencySymbol": true
+    }
+  },
+  "giftRegistryData": null,
+  "openTextField": null,
+  "invoiceData": null,
+  "customData": null,
+  "itemMetadata": {
+    "items": [
+      {
+        "id": "250340",
+        "seller": "1",
+        "name": "On Cloudmonster 3 Tenis negro de hombre para correr Talla :-8-",
+        "skuName": "Talla :-8-",
+        "productId": "46006",
+        "refId": "1213364",
+        "ean": "7615537589077",
+        "imageUrl": "https://prochampions.vteximg.com.br/arquivos/ids/1505561-100-100/3MG10054857-cloudmonster_3-ss26-rock_silver-m-1x1-d.png?v=639105731283670000",
+        "detailUrl": "/on-cloudmonster-3-tenis-negro-de-hombre-para-correr-3mg10054857-1/p",
+        "assemblyOptions": []
+      }
+    ]
+  },
+  "hooksData": null,
+  "ratesAndBenefitsData": {
+    "rateAndBenefitsIdentifiers": [],
+    "teaser": []
+  },
+  "subscriptionData": null,
+  "merchantContextData": null,
+  "purchaseAgentsData": null,
+  "itemsOrdination": null
+}
