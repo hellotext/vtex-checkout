@@ -1,4 +1,4 @@
-import Hellotext from "hellotext.js";
+import Hellotext from "@hellotext/hellotext";
 import { extractUserData, extractOrderData } from "./utils";
 
 export default {
