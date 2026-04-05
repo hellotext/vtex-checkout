@@ -10,11 +10,16 @@ VTEX's checkout is a separate SPA from the storefront. The Hellotext pixel only 
 
 Add the following script tag to your VTEX checkout configuration (**Admin > Checkout > Code > checkout6-custom.js**):
 
-```html
-<script src="https://unpkg.com/@hellotext/vtex-checkout/dist/funnel.js"></script>
-<script>
-  Hellotext.initialize("YOUR_BUSINESS_ID");
-</script>
+```javascript
+// Hellotext Checkout Funnel
+(function() {
+  var script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/@hellotext/vtex-checkout@latest/dist/funnel.js";
+  script.onload = function() {
+    Hellotext.initialize('YOUR_BUSINESS_ID');
+  };
+  document.head.appendChild(script);
+})();
 ```
 
 Replace `YOUR_BUSINESS_ID` with your Hellotext business ID.
