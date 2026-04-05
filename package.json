@@ -2,6 +2,7 @@
   "name": "@hellotext/vtex-checkout",
   "version": "0.0.1",
   "description": "Hellotext SDK for VTEX Checkout Funnel and Confirmation",
+  "unpkg": "dist/funnel.js",
   "author": "Hellotext",
   "license": "MIT",
   "files": [
