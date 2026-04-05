@@ -1,17 +1,13 @@
-jest.mock(
-  "hellotext.js",
-  () => ({
-    __esModule: true,
-    default: {
-      initialize: jest.fn(),
-      identify: jest.fn(),
-      track: jest.fn(),
-    },
-  }),
-  { virtual: true }
-);
+jest.mock("@hellotext/hellotext/vanilla", () => ({
+  __esModule: true,
+  default: {
+    initialize: jest.fn(),
+    identify: jest.fn(),
+    track: jest.fn(),
+  },
+}));
 
-const Hellotext = require("hellotext.js").default;
+const Hellotext = require("@hellotext/hellotext/vanilla").default;
 const confirmation = require("../confirmation").default;
 
 const createOrderForm = () => ({

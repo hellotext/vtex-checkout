@@ -1,4 +1,4 @@
-import Hellotext from "@hellotext/hellotext";
+import Hellotext from "@hellotext/hellotext/vanilla";
 import { extractUserData } from "./utils";
 
 export default {
@@ -8,8 +8,8 @@ export default {
     const handleUpdate = (orderForm) => {
       const user = extractUserData(orderForm);
 
-      if (user) {
-        Hellotext.identify(user.id, user);
+      if (user.email || user.phone) {
+        Hellotext.identify(user.email || user.phone, user);
       }
     };
 

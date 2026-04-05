@@ -1,4 +1,4 @@
-import Hellotext from "@hellotext/hellotext";
+import Hellotext from "@hellotext/hellotext/vanilla";
 import { extractUserData, extractOrderData } from "./utils";
 
 export default {
@@ -10,14 +10,14 @@ export default {
         const user = extractUserData(orderForm);
         const order = extractOrderData(orderForm);
 
-        if (user) {
-          Hellotext.identify(user.id, user);
-        }
+        if (user.email || user.phone) {
+          Hellotext.identify(user.email || user.phone, user);
 
-        Hellotext.track("order.placed", {
-          user_parameters: user,
-          object_parameters: order,
-        });
+          Hellotext.track("order.placed", {
+            user_parameters: user,
+            object_parameters: order,
+          });
+        }
       });
     }
   },

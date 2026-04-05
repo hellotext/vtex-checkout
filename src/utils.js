@@ -13,7 +13,7 @@ const extractUserData = (orderForm) => {
 };
 
 const extractOrderData = (orderForm) => {
-  const storeData = orderForm.storePreferencesData;
+  const storeData = orderForm.storePreferencesData || {};
   const logisticsInfo = orderForm.shippingData?.logisticsInfo || [];
 
   const delivery =

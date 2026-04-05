@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "hellotext-[name].js",
+    filename: "[name].js",
     library: {
       name: "Hellotext",
       type: "umd",
@@ -24,17 +24,6 @@ module.exports = {
         exclude: [/node_modules/],
         use: [{ loader: "babel-loader" }],
       },
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
     ],
-  },
-  resolve: {
-    extensions: [".js", ".mjs"],
-    alias: {
-      // Ensure it points to the core package if you're developing locally
-      "hellotext.js": path.resolve(__dirname, "node_modules/hellotext.js"),
-    },
   },
 };

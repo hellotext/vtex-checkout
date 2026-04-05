@@ -1,17 +1,13 @@
-jest.mock(
-  "hellotext.js",
-  () => ({
-    __esModule: true,
-    default: {
-      initialize: jest.fn(),
-      identify: jest.fn(),
-      track: jest.fn(),
-    },
-  }),
-  { virtual: true }
-);
+jest.mock("@hellotext/hellotext/vanilla", () => ({
+  __esModule: true,
+  default: {
+    initialize: jest.fn(),
+    identify: jest.fn(),
+    track: jest.fn(),
+  },
+}));
 
-const Hellotext = require("hellotext.js").default;
+const Hellotext = require("@hellotext/hellotext/vanilla").default;
 const funnel = require("../funnel").default;
 
 const createOrderForm = () => ({
@@ -116,6 +112,21 @@ describe("funnel.initialize", () => {
       document: "TEST-DOC-12345",
       source: "vtex",
     });
+  });
+
+  it("does not identify when the shopper has no email or phone", () => {
+    const orderForm = createOrderForm();
+    delete orderForm.clientProfileData.email;
+    delete orderForm.clientProfileData.phone;
+
+    getOrderFormMock = jest.fn(() => ({
+      done: (callback) => callback(orderForm),
+    }));
+    global.window.vtexjs.checkout.getOrderForm = getOrderFormMock;
+
+    funnel.initialize("business-123");
+
+    expect(Hellotext.identify).not.toHaveBeenCalled();
   });
 
   it("identifies the shopper again when VTEX emits an order update event", () => {
