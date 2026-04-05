@@ -1,4 +1,4 @@
-# @hellotext/vtex-checkout
+# Hellotext for VTEX Checkout
 
 Hellotext SDK for VTEX Checkout. Captures shopper identity during the checkout funnel — where the standard Hellotext pixel cannot run — by listening to VTEX's `orderFormUpdated` events and calling `Hellotext.identify`.
 
