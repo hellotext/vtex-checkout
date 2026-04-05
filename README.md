@@ -12,11 +12,12 @@ Add the following script tag to your VTEX checkout configuration (**Admin > Chec
 
 ```javascript
 // Hellotext Checkout Funnel
-(function() {
-  var script = document.createElement('script');
-  script.src = "https://cdn.jsdelivr.net/npm/@hellotext/vtex-checkout@latest/dist/funnel.js";
-  script.onload = function() {
-    Hellotext.initialize('YOUR_BUSINESS_ID');
+(function () {
+  var script = document.createElement("script");
+  script.src =
+    "https://cdn.jsdelivr.net/npm/@hellotext/vtex-checkout@1/dist/funnel.js";
+  script.onload = function () {
+    Hellotext.initialize("YOUR_BUSINESS_ID");
   };
   document.head.appendChild(script);
 })();
