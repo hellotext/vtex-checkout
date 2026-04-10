@@ -34,9 +34,9 @@ const createOrderForm = () => ({
       price: 109995000,
       sellingPrice: 109995000,
       productCategories: {
-        "1": "Hombre",
-        "2": "Tenis",
-        "3": "Correr",
+        1: "Hombre",
+        2: "Tenis",
+        3: "Correr",
       },
       quantity: 1,
       imageUrl: "https://example.com/demo-running-shoe.png",
@@ -54,8 +54,8 @@ describe("extractUserData", () => {
     expect(extractUserData(orderForm)).toEqual({
       id: "test.user@example.com",
       email: "test.user@example.com",
-      firstName: "Test",
-      lastName: "User",
+      first_name: "Test",
+      last_name: "User",
       phone: "+15555550123",
       document: "TEST-DOC-12345",
       source: "vtex",

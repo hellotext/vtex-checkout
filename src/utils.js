@@ -4,8 +4,8 @@ const extractUserData = (orderForm) => {
   return {
     id: profile.email,
     email: profile.email,
-    firstName: profile.firstName,
-    lastName: profile.lastName,
+    first_name: profile.firstName,
+    last_name: profile.lastName,
     phone: profile.phone,
     document: profile.document,
     source: "vtex",
