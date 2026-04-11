@@ -20,7 +20,7 @@
     "prepublishOnly": "npm test && npm run build"
   },
   "dependencies": {
-    "@hellotext/hellotext": "^2.3.6"
+    "@hellotext/hellotext": "^2.3.7"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
