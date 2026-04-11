@@ -1,6 +1,6 @@
 {
   "name": "@hellotext/vtex-checkout",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hellotext SDK for VTEX Checkout",
   "unpkg": "dist/funnel.js",
   "author": "Hellotext",
