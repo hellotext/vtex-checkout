@@ -10,6 +10,11 @@ jest.mock("@hellotext/hellotext/vanilla", () => ({
 const Hellotext = require("@hellotext/hellotext/vanilla").default;
 const funnel = require("../funnel").default;
 
+const flushAsyncWork = async () => {
+  await Promise.resolve();
+  await Promise.resolve();
+};
+
 const createOrderForm = () => ({
   orderFormId: "order-form-123",
   orderGroup: "order-group-123",
@@ -64,6 +69,8 @@ describe("funnel.initialize", () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    window.sessionStorage.clear();
+    Hellotext.track.mockResolvedValue({ succeeded: true });
 
     orderFormUpdatedHandler = undefined;
 
@@ -93,8 +100,9 @@ describe("funnel.initialize", () => {
     delete global.window.vtexjs;
   });
 
-  it("initializes Hellotext, subscribes to order updates, and identifies the current shopper", () => {
+  it("initializes Hellotext, subscribes to order updates, identifies the current shopper, and tracks checkout started", async () => {
     funnel.initialize("business-123");
+    await flushAsyncWork();
 
     expect(Hellotext.initialize).toHaveBeenCalledWith("business-123");
     expect(global.$).toHaveBeenCalledWith(global.window);
@@ -112,9 +120,35 @@ describe("funnel.initialize", () => {
       document: "TEST-DOC-12345",
       source: "vtex",
     });
+    expect(Hellotext.track).toHaveBeenCalledWith("checkout.started", {
+      user_parameters: {
+        id: "test.user@example.com",
+        email: "test.user@example.com",
+        first_name: "Test",
+        last_name: "User",
+        phone: "+15555550123",
+        document: "TEST-DOC-12345",
+        source: "vtex",
+      },
+      object_parameters: {
+        reference: "order-group-123",
+        amount: 109995000,
+        currency: "COP",
+        delivery: "deliver",
+        items: [
+          expect.objectContaining({
+            quantity: 1,
+            product: expect.objectContaining({
+              reference: "250340",
+              sku: "250340",
+            }),
+          }),
+        ],
+      },
+    });
   });
 
-  it("does not identify when the shopper has no email or phone", () => {
+  it("tracks checkout started even when the shopper has no email or phone", async () => {
     const orderForm = createOrderForm();
     delete orderForm.clientProfileData.email;
     delete orderForm.clientProfileData.phone;
@@ -125,19 +159,48 @@ describe("funnel.initialize", () => {
     global.window.vtexjs.checkout.getOrderForm = getOrderFormMock;
 
     funnel.initialize("business-123");
+    await flushAsyncWork();
 
     expect(Hellotext.identify).not.toHaveBeenCalled();
+    expect(Hellotext.track).toHaveBeenCalledWith("checkout.started", {
+      user_parameters: {
+        id: undefined,
+        email: undefined,
+        first_name: "Test",
+        last_name: "User",
+        phone: undefined,
+        document: "TEST-DOC-12345",
+        source: "vtex",
+      },
+      object_parameters: {
+        reference: "order-group-123",
+        amount: 109995000,
+        currency: "COP",
+        delivery: "deliver",
+        items: [
+          expect.objectContaining({
+            quantity: 1,
+            product: expect.objectContaining({
+              reference: "250340",
+              sku: "250340",
+            }),
+          }),
+        ],
+      },
+    });
   });
 
-  it("identifies the shopper again when VTEX emits an order update event", () => {
+  it("identifies the shopper again when VTEX emits an order update event", async () => {
     const updatedOrderForm = createOrderForm();
 
     updatedOrderForm.clientProfileData.email = "updated.user@example.com";
     updatedOrderForm.clientProfileData.firstName = "Updated";
 
     funnel.initialize("business-123");
+    await flushAsyncWork();
 
     Hellotext.identify.mockClear();
+    Hellotext.track.mockClear();
     orderFormUpdatedHandler({}, updatedOrderForm);
 
     expect(Hellotext.identify).toHaveBeenCalledWith(
@@ -152,6 +215,101 @@ describe("funnel.initialize", () => {
         source: "vtex",
       },
     );
+    expect(Hellotext.track).not.toHaveBeenCalled();
+  });
+
+  it("tracks checkout started once per order form id", async () => {
+    const updatedOrderForm = createOrderForm();
+
+    funnel.initialize("business-123");
+    await flushAsyncWork();
+
+    Hellotext.identify.mockClear();
+    Hellotext.track.mockClear();
+    orderFormUpdatedHandler({}, updatedOrderForm);
+
+    expect(Hellotext.track).not.toHaveBeenCalled();
+  });
+
+  it("tracks checkout started again when VTEX updates to a new order form", async () => {
+    const updatedOrderForm = createOrderForm();
+
+    updatedOrderForm.orderFormId = "order-form-456";
+    updatedOrderForm.orderGroup = "order-group-456";
+
+    funnel.initialize("business-123");
+    await flushAsyncWork();
+
+    Hellotext.track.mockClear();
+    orderFormUpdatedHandler({}, updatedOrderForm);
+
+    expect(Hellotext.track).toHaveBeenCalledWith("checkout.started", {
+      user_parameters: {
+        id: "test.user@example.com",
+        email: "test.user@example.com",
+        first_name: "Test",
+        last_name: "User",
+        phone: "+15555550123",
+        document: "TEST-DOC-12345",
+        source: "vtex",
+      },
+      object_parameters: {
+        reference: "order-group-456",
+        amount: 109995000,
+        currency: "COP",
+        delivery: "deliver",
+        items: [
+          expect.objectContaining({
+            quantity: 1,
+            product: expect.objectContaining({
+              reference: "250340",
+              sku: "250340",
+            }),
+          }),
+        ],
+      },
+    });
+  });
+
+  it("does not double-send checkout started while the first request is still pending", async () => {
+    const updatedOrderForm = createOrderForm();
+    let resolveTrack;
+
+    Hellotext.track.mockImplementation(
+      () =>
+        new Promise((resolve) => {
+          resolveTrack = resolve;
+        }),
+    );
+
+    funnel.initialize("business-123");
+
+    expect(Hellotext.track).toHaveBeenCalledTimes(1);
+
+    orderFormUpdatedHandler({}, updatedOrderForm);
+
+    expect(Hellotext.track).toHaveBeenCalledTimes(1);
+
+    resolveTrack({ succeeded: true });
+    await flushAsyncWork();
+  });
+
+  it("retries checkout started for the same order form when the previous track call did not succeed", async () => {
+    const updatedOrderForm = createOrderForm();
+
+    Hellotext.track
+      .mockResolvedValueOnce({ succeeded: false })
+      .mockResolvedValueOnce({ succeeded: true });
+
+    funnel.initialize("business-123");
+    await flushAsyncWork();
+
+    expect(Hellotext.track).toHaveBeenCalledTimes(1);
+
+    orderFormUpdatedHandler({}, updatedOrderForm);
+    await flushAsyncWork();
+
+    expect(Hellotext.track).toHaveBeenCalledTimes(2);
   });
 
   it("still wires the VTEX event listener when checkout is not available", () => {
@@ -166,5 +324,6 @@ describe("funnel.initialize", () => {
       expect.any(Function),
     );
     expect(Hellotext.identify).not.toHaveBeenCalled();
+    expect(Hellotext.track).not.toHaveBeenCalled();
   });
 });

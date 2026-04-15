@@ -1,6 +1,6 @@
 # Hellotext for VTEX Checkout
 
-Hellotext SDK for VTEX Checkout. Captures shopper identity during the checkout funnel — where the standard Hellotext pixel cannot run — by listening to VTEX's `orderFormUpdated` events and calling `Hellotext.identify`.
+Hellotext SDK for VTEX Checkout. Captures shopper identity during the checkout funnel — where the standard Hellotext pixel cannot run — by listening to VTEX checkout state and calling `Hellotext.identify` and `Hellotext.track`.
 
 ## Why
 
@@ -28,9 +28,10 @@ Replace `YOUR_BUSINESS_ID` with your Hellotext business ID.
 ## How it works
 
 1. Initializes the Hellotext SDK with your business ID.
-2. Subscribes to VTEX's `orderFormUpdated.vtex` jQuery event, which fires on every checkout state change.
+2. Loads the current VTEX `orderForm` and subscribes to `orderFormUpdated.vtex`, which fires on checkout state changes.
 3. Extracts the shopper's profile (`email`, `phone`, `firstName`, `lastName`, `document`) from the `orderForm.clientProfileData`.
 4. Calls `Hellotext.identify` as soon as an email or phone is available.
+5. Tracks `checkout.started` once per `orderFormId` per browser session.
 
 ## Development
 
