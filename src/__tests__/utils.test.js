@@ -69,8 +69,7 @@ describe("extractOrderData", () => {
 
     expect(extractOrderData(orderForm)).toEqual({
       reference: "order-group-123",
-      amount: 109995000,
-      currency: "COP",
+      source: "vtex",
       delivery: "deliver",
       items: [
         {

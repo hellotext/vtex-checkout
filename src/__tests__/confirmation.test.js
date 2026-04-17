@@ -106,8 +106,7 @@ describe("confirmation.initialize", () => {
       },
       object_parameters: {
         reference: "order-group-123",
-        amount: 109995000,
-        currency: "COP",
+        source: "vtex",
         delivery: "deliver",
         items: [
           expect.objectContaining({
