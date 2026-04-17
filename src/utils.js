@@ -75,8 +75,7 @@ const extractOrderData = (orderForm) => {
 
   return {
     reference: orderForm.orderGroup || orderForm.orderFormId,
-    amount: orderForm.value || 0,
-    currency: storeData.currencyCode,
+    source: "vtex",
     delivery,
     items,
   };
