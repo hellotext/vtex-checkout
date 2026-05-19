@@ -1,7 +1,8 @@
 const extractUserData = (orderForm) => {
   const profile = orderForm?.clientProfileData || {};
+  const preferences = orderForm?.clientPreferencesData || {};
 
-  return {
+  const user = {
     id: profile.email,
     email: profile.email,
     first_name: profile.firstName,
@@ -10,6 +11,12 @@ const extractUserData = (orderForm) => {
     document: profile.document,
     source: "vtex",
   };
+
+  if (preferences.optinNewsLetter === true) {
+    user.subscription_state = true;
+  }
+
+  return user;
 };
 
 const extractOrderData = (orderForm) => {
@@ -75,8 +82,7 @@ const extractOrderData = (orderForm) => {
 
   return {
     reference: orderForm.orderGroup || orderForm.orderFormId,
-    amount: orderForm.value || 0,
-    currency: storeData.currencyCode,
+    source: "vtex",
     delivery,
     items,
   };
