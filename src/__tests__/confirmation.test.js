@@ -121,6 +121,44 @@ describe("confirmation.initialize", () => {
     });
   });
 
+  it("identifies newsletter opt-in from the current order form", () => {
+    const orderForm = createOrderForm();
+
+    orderForm.clientPreferencesData = {
+      optinNewsLetter: true,
+    };
+
+    getOrderFormMock = jest.fn(() => ({
+      done: (callback) => callback(orderForm),
+    }));
+    global.window.vtexjs.checkout.getOrderForm = getOrderFormMock;
+
+    confirmation.initialize("business-123");
+
+    const expectedUser = {
+      id: "test.user@example.com",
+      email: "test.user@example.com",
+      first_name: "Test",
+      last_name: "User",
+      phone: "+15555550123",
+      document: "TEST-DOC-12345",
+      source: "vtex",
+      subscription_state: true,
+    };
+
+    expect(Hellotext.identify).toHaveBeenCalledWith(
+      "test.user@example.com",
+      expectedUser,
+    );
+    expect(Hellotext.track).toHaveBeenCalledWith("order.placed", {
+      user_parameters: expectedUser,
+      object_parameters: expect.objectContaining({
+        reference: "order-group-123",
+        source: "vtex",
+      }),
+    });
+  });
+
   it("only initializes Hellotext when VTEX checkout is unavailable", () => {
     delete global.window.vtexjs;
     delete global.vtexjs;

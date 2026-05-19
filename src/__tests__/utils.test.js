@@ -61,6 +61,32 @@ describe("extractUserData", () => {
       source: "vtex",
     });
   });
+
+  it("maps VTEX newsletter opt-in into a Hellotext subscribe signal", () => {
+    const orderForm = createOrderForm();
+
+    orderForm.clientPreferencesData = {
+      optinNewsLetter: true,
+    };
+
+    expect(extractUserData(orderForm)).toEqual(
+      expect.objectContaining({
+        subscription_state: true,
+      }),
+    );
+  });
+
+  it("does not send a subscription state when VTEX newsletter opt-in is false", () => {
+    const orderForm = createOrderForm();
+
+    orderForm.clientPreferencesData = {
+      optinNewsLetter: false,
+    };
+
+    expect(extractUserData(orderForm)).not.toHaveProperty(
+      "subscription_state",
+    );
+  });
 });
 
 describe("extractOrderData", () => {

@@ -216,6 +216,33 @@ describe("funnel.initialize", () => {
     expect(Hellotext.track).not.toHaveBeenCalled();
   });
 
+  it("identifies newsletter opt-in changes when VTEX emits an order update event", async () => {
+    const updatedOrderForm = createOrderForm();
+
+    updatedOrderForm.clientPreferencesData = {
+      optinNewsLetter: true,
+    };
+
+    funnel.initialize("business-123");
+    await flushAsyncWork();
+
+    Hellotext.identify.mockClear();
+    Hellotext.track.mockClear();
+    orderFormUpdatedHandler({}, updatedOrderForm);
+
+    expect(Hellotext.identify).toHaveBeenCalledWith("test.user@example.com", {
+      id: "test.user@example.com",
+      email: "test.user@example.com",
+      first_name: "Test",
+      last_name: "User",
+      phone: "+15555550123",
+      document: "TEST-DOC-12345",
+      source: "vtex",
+      subscription_state: true,
+    });
+    expect(Hellotext.track).not.toHaveBeenCalled();
+  });
+
   it("tracks checkout started once per order form id", async () => {
     const updatedOrderForm = createOrderForm();
 
